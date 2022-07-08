@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.mytests.spring.boot.test0.autoconfiguration.Configuration1,\
+  com.mytests.spring.boot.test0.autoconfiguration.Configuration2
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+  com.mytests.spring.boot.test0.autoconfiguration.Configuration3,\
+  com.mytests.spring.boot.test0.autoconfiguration.Configuration4

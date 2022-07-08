@@ -1,0 +1,10 @@
+my:
+  conf:
+    props:
+      condition1: true
+      condition2: false
+spring:
+  cloud:
+     config:
+        enabled: false
+debug: true
