@@ -10,4 +10,11 @@ public class ConditionalBean3 {
     public String getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "ConditionalBean3{" +
+                "id='" + id + '\'' +
+                '}';
+    }
 }

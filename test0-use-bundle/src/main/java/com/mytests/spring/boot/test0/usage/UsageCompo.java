@@ -16,6 +16,7 @@ public class UsageCompo {
 
     @Autowired(required = false)  Condition1Bean condition1Bean; // @ConditionalOnProperty(name = "my.conf.props.condition1", havingValue = "true")
 
+    // should not be available since the property has value 'false'!
     @Autowired(required = false)  Condition2Bean condition2Bean; // @ConditionalOnProperty(name = "my.conf.props.condition2", havingValue = "true")
 
 
@@ -35,12 +36,12 @@ public class UsageCompo {
 
     public void displayAll(){
         if (this.condition1Bean != null) {
-            System.out.println(this.condition1Bean.getProvidedString());
+            System.out.println("condition1Bean is available: "+this.condition1Bean.getProvidedString());
         } else {
             System.out.println("condition1Bean is not available");
         }
         if (this.condition2Bean != null) {
-            System.out.println(this.condition2Bean.toString());
+            System.out.println("condition2Bean is available: "+this.condition2Bean.toString());
         } else {
             System.out.println("condition2Bean is not available");
         }
@@ -50,12 +51,12 @@ public class UsageCompo {
             System.out.println("conditional1Bean1 is not available");
         }
         if (this.conditionalBean3 != null) {
-            System.out.println(this.conditionalBean3.getId());
+            System.out.println("ConditionalBean3 is available "+this.conditionalBean3.getId());
         } else {
             System.out.println("conditional1Bean3 is not available");
         }
         if (this.conditionalBean4 != null) {
-            System.out.println(this.conditionalBean4.getCondition());
+            System.out.println(this.conditionalBean4.toString()+" with dependency to "+this.conditionalBean4.getCondition().toString());
         } else {
             System.out.println("conditional1Bean4 is not available");
         }
