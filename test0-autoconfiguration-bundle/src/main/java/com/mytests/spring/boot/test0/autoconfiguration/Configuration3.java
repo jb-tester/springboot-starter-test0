@@ -24,4 +24,9 @@ public class Configuration3 {
     public ConditionalBean4 cond4(@Autowired ConditionalBean3 conditionalBean3) {
         return new ConditionalBean4(conditionalBean3);
     }
+
+    @Override
+    public String toString() {
+        return "Configuration3{ conditional on {ConditionalBean3.class, ConditionalBean4.class} classes config registered in BootstrapConfiguration list in spring.factories }";
+    }
 }

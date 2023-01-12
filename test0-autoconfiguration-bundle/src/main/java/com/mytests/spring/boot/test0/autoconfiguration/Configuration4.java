@@ -13,4 +13,9 @@ import org.springframework.core.Ordered;
 @Configuration
 @AutoConfigureOrder(Ordered.HIGHEST_PRECEDENCE)
 public class Configuration4 {
+
+    @Override
+    public String toString() {
+        return "Configuration4{ not conditional config registered in BootstrapConfiguration list in spring.factories}";
+    }
 }

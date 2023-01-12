@@ -16,4 +16,9 @@ public class Configuration2 {
     public ConditionalBean1 conditionalBean1(Condition1Bean condition1) {
         return new ConditionalBean1(condition1);
     }
+
+    @Override
+    public String toString() {
+        return "Configuration2{ conditional on Condition1Bean bean presence config registered in EnableAutoConfiguration list in spring.factories}";
+    }
 }

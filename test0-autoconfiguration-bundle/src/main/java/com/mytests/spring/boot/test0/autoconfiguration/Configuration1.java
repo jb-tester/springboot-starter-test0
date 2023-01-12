@@ -18,4 +18,9 @@ public class Configuration1 {
     public Condition2Bean condition2Bean() {
         return new Condition2Bean();
     }
+
+    @Override
+    public String toString() {
+        return "Configuration1{ not conditional config registered in EnableAutoConfiguration list in spring.factories }";
+    }
 }

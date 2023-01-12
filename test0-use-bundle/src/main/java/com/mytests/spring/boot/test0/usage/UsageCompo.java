@@ -43,43 +43,43 @@ public class UsageCompo {
         if (this.condition2Bean != null) {
             System.out.println("condition2Bean is available: "+this.condition2Bean.toString());
         } else {
-            System.out.println("condition2Bean is not available");
+            System.out.println("!!! condition2Bean is not available");
         }
         if (this.conditionalBean1 != null) {
             System.out.println(this.conditionalBean1.getProvidedString());
         } else {
-            System.out.println("conditional1Bean1 is not available");
+            System.out.println("!!! conditional1Bean1 is not available");
         }
         if (this.conditionalBean3 != null) {
-            System.out.println("ConditionalBean3 is available "+this.conditionalBean3.getId());
+            System.out.println("ConditionalBean3 is available: condition is "+this.conditionalBean3.getId());
         } else {
-            System.out.println("conditional1Bean3 is not available");
+            System.out.println("!!! conditional1Bean3 is not available");
         }
         if (this.conditionalBean4 != null) {
             System.out.println(this.conditionalBean4.toString()+" with dependency to "+this.conditionalBean4.getCondition().toString());
         } else {
-            System.out.println("conditional1Bean4 is not available");
+            System.out.println("!!! conditional1Bean4 is not available");
         }
         System.out.println("--configuration classes:");
         if (this.configuration1 != null) {
             System.out.println(this.configuration1.toString());
         } else {
-            System.out.println("configuration1 is not available");
+            System.out.println("!!! configuration1 is not available");
         }
         if (this.configuration2 != null) {
             System.out.println(this.configuration2.toString());
         } else {
-            System.out.println("configuration2 is not available");
+            System.out.println("!!! configuration2 is not available");
         }
         if (this.configuration3 != null) {
             System.out.println(this.configuration3.toString());
         } else {
-            System.out.println("configuration3 is not available");
+            System.out.println("!!! configuration3 is not available");
         }
         if (this.configuration4 != null) {
             System.out.println(this.configuration4.toString());
         } else {
-            System.out.println("configuration4 is not available");
+            System.out.println("!!! configuration4 is not available");
         }
     }
 
