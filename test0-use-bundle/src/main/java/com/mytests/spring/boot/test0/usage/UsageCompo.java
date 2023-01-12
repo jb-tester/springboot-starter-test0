@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UsageCompo {
 
+     // spring.factories - EnableAutoConfiguration:
 
     @Autowired(required = false)  Condition1Bean condition1Bean; // @ConditionalOnProperty(name = "my.conf.props.condition1", havingValue = "true")
 
@@ -22,15 +23,23 @@ public class UsageCompo {
 
     @Autowired(required = false)  ConditionalBean1 conditionalBean1; // @ConditionalOnMissingBean(Condition2Bean.class) - - should be available if NOT my.conf.props.condition1=true
 
-    @Autowired(required = false)  ConditionalBean3 conditionalBean3; // should be available if Configuration3 is available
-
-    @Autowired(required = false)  ConditionalBean4 conditionalBean4; // should be available if Configuration3 is available
-
-
     @Autowired(required = false)  Configuration1 configuration1; // not conditional
     @Autowired(required = false)  Configuration2 configuration2; // @ConditionalOnBean(Condition1Bean.class) - should be available if my.conf.props.condition1=true
+
+    // spring.factories - BootstrapConfiguration:
+
+    // shown as not available without Spring facet
+    @Autowired(required = false)  ConditionalBean3 conditionalBean3; // should be available if Configuration3 is available
+
+    // shown as not available without Spring facet
+    @Autowired(required = false)  ConditionalBean4 conditionalBean4; // should be available if Configuration3 is available
+
+    // shown as not available without Spring facet
     @Autowired(required = false)  Configuration3 configuration3; // @ConditionalOnClass({ConditionalBean3.class, ConditionalBean4.class})
+    // shown as not available without Spring facet
     @Autowired(required = false)  Configuration4 configuration4; // not conditional
+
+
 
 
 
