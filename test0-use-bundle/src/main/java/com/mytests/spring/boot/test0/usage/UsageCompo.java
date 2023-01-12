@@ -16,11 +16,8 @@ public class UsageCompo {
      // spring.factories - EnableAutoConfiguration:
 
     @Autowired(required = false)  Condition1Bean condition1Bean; // @ConditionalOnProperty(name = "my.conf.props.condition1", havingValue = "true")
-
-    // should not be available since the property has value 'false'!
+    // !!! should not be available since the property has value 'false'!
     @Autowired(required = false)  Condition2Bean condition2Bean; // @ConditionalOnProperty(name = "my.conf.props.condition2", havingValue = "true")
-
-
     @Autowired(required = false)  ConditionalBean1 conditionalBean1; // @ConditionalOnMissingBean(Condition2Bean.class) - - should be available if NOT my.conf.props.condition1=true
 
     @Autowired(required = false)  Configuration1 configuration1; // not conditional
@@ -30,10 +27,8 @@ public class UsageCompo {
 
     // shown as not available without Spring facet
     @Autowired(required = false)  ConditionalBean3 conditionalBean3; // should be available if Configuration3 is available
-
     // shown as not available without Spring facet
     @Autowired(required = false)  ConditionalBean4 conditionalBean4; // should be available if Configuration3 is available
-
     // shown as not available without Spring facet
     @Autowired(required = false)  Configuration3 configuration3; // @ConditionalOnClass({ConditionalBean3.class, ConditionalBean4.class})
     // shown as not available without Spring facet
